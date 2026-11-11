@@ -1,0 +1,16 @@
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependencies (only if you add Composer or npm later)
+vendor/
+node_modules/
+
+# Logs and local config
+*.log
+debug.log
+
+# Environment files
+.env
