@@ -16,7 +16,7 @@ $images = array(
                 src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $image['file'] ) ); ?>"
                 alt="<?php echo esc_attr( $image['alt'] ); ?>"
                 width="600"
-                height="450"
+                height="400"
                 loading="lazy"
                 decoding="async"
             >
