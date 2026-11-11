@@ -63,3 +63,31 @@
   max-height: 0;
   opacity: 0;
 }
+
+/* 
+This solves the issue with Accessibility complaint from lighthouse.
+This adds more space to the touch target for accessibility improvement.
+*/
+.site-nav ul {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a,
+.btn,
+.menu-toggle,
+.faq-question {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

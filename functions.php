@@ -27,3 +27,19 @@ function bakery_assets() {
 }
 }
 add_action( 'wp_enqueue_scripts', 'bakery_assets' );
+
+// Add meta description for SEO
+function bakery_meta_description() {
+    if ( is_front_page() ) {
+        $description = 'Family-owned local bakery serving fresh artisan bread, croissants, cakes and cookie boxes for over 20 years. Order online or call us today.';
+    } elseif ( is_page( 'contact-us' ) ) {
+        $description = 'Contact our local bakery to place a custom cake or bulk order, ask a question, or find our address and opening hours.';
+    } else {
+        $description = get_bloginfo( 'description' );
+    }
+
+    if ( $description ) {
+        echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
+    }
+}
+add_action( 'wp_head', 'bakery_meta_description', 1 );

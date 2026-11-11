@@ -6,3 +6,8 @@ defining width and height attributes let the browser reserve space before the im
 decoding="async" lets the browser decode images without blocking rendering.
 get_theme_file_uri() builds the correct URL from the theme folder, and esc_url() and esc_attr() escape the output.
 Used AI to generate 6 image files which i referenced in gallery.php file using images array variable
+Note:
+    Lighthouse score;
+        before fixing SSL certificate and the redirect issues; Performance: 99, Accessibility: 96, Best Practices: 78, and SEO: 92
+    Lighthouse score;
+        after fixing the SSL certificate to trusted, Performance: 100, Accessibility: 96, Best Practices: 100, and SEO: 92
