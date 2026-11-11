@@ -11,3 +11,5 @@ Note:
         before fixing SSL certificate and the redirect issues; Performance: 99, Accessibility: 96, Best Practices: 78, and SEO: 92
     Lighthouse score;
         after fixing the SSL certificate to trusted, Performance: 100, Accessibility: 96, Best Practices: 100, and SEO: 92
+    Lighthouse score;
+        after fixing meta description dynamically, Performance: 99, Accessibility: 96, Best Practices: 100, and SEO: 100

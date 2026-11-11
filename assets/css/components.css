@@ -75,7 +75,17 @@ This adds more space to the touch target for accessibility improvement.
   padding: 0;
   list-style: none;
 }
-
+.nojq .quicklinks ul.ab-top-menu li.menupop .ab-item,
+.nojq .quicklinks ul.ab-top-menu li.hide-if-no-customize .ab-item {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+}
+.nojq .skip-link {
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+}
 .site-nav a,
 .btn,
 .menu-toggle,
