@@ -5,3 +5,4 @@ implementing loading="lazy" makes the browser load an image only when it’s nea
 defining width and height attributes let the browser reserve space before the image arrives. That prevents layout shift, which is part of Core Web Vitals (CLS)
 decoding="async" lets the browser decode images without blocking rendering.
 get_theme_file_uri() builds the correct URL from the theme folder, and esc_url() and esc_attr() escape the output.
+Used AI to generate 6 image files which i referenced in gallery.php file using images array variable
