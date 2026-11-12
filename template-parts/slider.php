@@ -15,7 +15,7 @@ $slides = array(
                     src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $slide['file'] ) ); ?>"
                     alt="<?php echo esc_attr( $slide['alt'] ); ?>"
                     width="1200"
-                    height="800"
+                    height="600"
                     decoding="async"
                     <?php echo 0 === $i ? 'fetchpriority="high"' : 'loading="lazy"'; ?>
                 >

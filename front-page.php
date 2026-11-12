@@ -1,3 +1,4 @@
+<?php echo 'FAQ loaded'; ?>
 <?php get_header(); ?>
 
 <main id="main">

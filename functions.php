@@ -23,9 +23,9 @@ function bakery_assets() {
     // Load JS in the footer and defer it so it doesn't block rendering
     wp_enqueue_script( 'bakery-menu', $uri . '/assets/js/menu.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
     if ( is_front_page() ) {
-    wp_enqueue_script( 'bakery-faq', $uri . '/assets/js/faq.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
-    wp_enqueue_script( 'bakery-slider', $uri . '/assets/js/slider.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
-}
+        wp_enqueue_script( 'bakery-faq', $uri . '/assets/js/faq.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
+        wp_enqueue_script( 'bakery-slider', $uri . '/assets/js/slider.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'bakery_assets' );
 

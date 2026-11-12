@@ -130,7 +130,7 @@ This adds more space to the touch target for accessibility improvement.
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 2;
   object-fit: cover;
 }
 
