@@ -17,8 +17,8 @@ function bakery_assets() {
     $ver = wp_get_theme()->get( 'Version' );
 
     wp_enqueue_style( 'bakery-base', $uri . '/assets/css/base.css', array(), $ver );
-    wp_enqueue_style( 'bakery-components', $uri . '/assets/css/components.css', array( 'bakery-base' ), $ver );
-    wp_enqueue_style( 'bakery-responsive', $uri . '/assets/css/responsive.css', array( 'bakery-components' ), $ver );
+    wp_enqueue_style( 'bakery-component', $uri . '/assets/css/component.css', array( 'bakery-base' ), $ver );
+    wp_enqueue_style( 'bakery-responsive', $uri . '/assets/css/responsive.css', array( 'bakery-component' ), $ver );
 
     // Load JS in the footer and defer it so it doesn't block rendering
     wp_enqueue_script( 'bakery-menu', $uri . '/assets/js/menu.js', array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );

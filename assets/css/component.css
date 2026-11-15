@@ -1,0 +1,767 @@
+/* =========================================
+   LOCAL BAKERY - DESIGN SYSTEM
+   Minimalist | Professional | Accessible
+========================================= */
+
+:root {
+  --color-background: #fff9f0;
+  --color-surface: #ffffff;
+  --color-text: #302016;
+  --color-muted: #51443a;
+  --color-primary: #7a351e;
+  --color-primary-hover: #5c2615;
+  --color-border: #8a725c;
+  --color-footer: #302016;
+  --color-footer-text: #fff9f0;
+
+  --container-width: 1200px;
+  --radius: 6px;
+  --transition: 200ms ease;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CONTAINER */
+.container {
+  width: min(100% - 40px, var(--container-width));
+  margin-inline: auto;
+}
+
+/* ACCESSIBILITY */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  z-index: 9999;
+  background: var(--color-text);
+  color: var(--color-background);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  z-index: 100;
+}
+
+.header-inner {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* LOGO */
+.site-logo {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+/* NAVIGATION */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: #ffffff;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FOCUS */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #7a351e;
+  outline-offset: 4px;
+}
+
+/* Main Content */
+
+/* =========================================
+   MAIN CONTENT — BAKERY THEME
+   Scope: #main only
+   ========================================= */
+
+#main {
+  --main-cream: #fff9f0;
+  --main-white: #ffffff;
+  --main-chocolate: #302016;
+  --main-brown: #7a351e;
+  --main-brown-dark: #5c2615;
+  --main-muted: #51443a;
+  --main-border: #8a725c;
+  --main-wheat: #e8d5b7;
+
+  background: var(--main-cream);
+  color: var(--main-chocolate);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+/* Base elements */
+
+#main *,
+#main *::before,
+#main *::after {
+  box-sizing: border-box;
+}
+
+#main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#main .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+#main section {
+  padding-block: 80px;
+}
+
+#main h1,
+#main h2,
+#main h3 {
+  color: var(--main-chocolate);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+#main h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin: 0 0 24px;
+}
+
+#main h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+#main h3 {
+  font-size: 1.2rem;
+}
+
+#main p {
+  color: var(--main-muted);
+}
+
+/* =========================================
+   INTRO / HERO
+   ========================================= */
+
+#main .intro {
+  padding-block: 100px;
+  background: var(--main-cream);
+  text-align: center;
+}
+
+#main .intro .container {
+  max-width: 850px;
+}
+
+#main .intro p {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Main call-to-action */
+
+#main .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 30px;
+
+  background: var(--main-brown);
+  color: var(--main-white);
+  border: 2px solid var(--main-brown);
+  border-radius: 6px;
+
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+#main .btn:hover {
+  background: var(--main-brown-dark);
+  border-color: var(--main-brown-dark);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   FEATURED BAKES / CAROUSEL
+   ========================================= */
+
+#main .featured {
+  padding-top: 20px;
+  background: var(--main-cream);
+}
+
+#main .featured h2 {
+  margin-bottom: 32px;
+}
+
+/* Carousel frame */
+
+#main .slider {
+  position: relative;
+  overflow: hidden;
+  background: var(--main-chocolate);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgb(48 32 22 / 8%);
+}
+
+/* Horizontal sliding track */
+
+#main .slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+#main .slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual slides */
+
+#main .slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+#main .slide img {
+  width: 100%;
+  height: clamp(320px, 55vw, 650px);
+  object-fit: cover;
+}
+
+/* Caption overlay */
+
+#main .slide figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 36px;
+  color: var(--main-white);
+
+  background: linear-gradient(
+    to top,
+    rgb(24 15 10 / 94%),
+    rgb(24 15 10 / 55%) 65%,
+    transparent
+  );
+}
+
+#main .slide figcaption strong {
+  color: var(--main-white);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+#main .slide figcaption span {
+  color: var(--main-white);
+  font-size: 1rem;
+}
+
+/* Carousel navigation */
+
+#main .slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 24px;
+}
+
+#main .slider-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  background: var(--main-white);
+  color: var(--main-chocolate);
+  border: 2px solid var(--main-border);
+  border-radius: 50%;
+
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+#main .slider-btn:hover {
+  background: var(--main-brown);
+  color: var(--main-white);
+  border-color: var(--main-brown);
+}
+
+/* Carousel indicators */
+
+#main .slider-indicators {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#main .slider-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  border: 2px solid var(--main-brown);
+  border-radius: 50%;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+#main .slider-dot[aria-current="true"] {
+  background: var(--main-brown);
+  transform: scale(1.15);
+}
+
+/* =========================================
+   PRODUCTS
+   ========================================= */
+
+#main .products {
+  background: var(--main-white);
+}
+
+#main .product-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main .product-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 160px;
+  padding: 24px;
+
+  background: var(--main-cream);
+  color: var(--main-chocolate);
+
+  border: 1px solid var(--main-wheat);
+  border-radius: 8px;
+
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+#main .product-list li:hover {
+  transform: translateY(-4px);
+  border-color: var(--main-brown);
+  box-shadow: 0 8px 24px rgb(48 32 22 / 8%);
+}
+
+/* =========================================
+   GALLERY
+   ========================================= */
+
+#main .gallery-section {
+  background: var(--main-cream);
+}
+
+#main .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#main .gallery-item {
+  margin: 0;
+  overflow: hidden;
+
+  background: var(--main-white);
+  border-radius: 8px;
+
+  box-shadow: 0 6px 20px rgb(48 32 22 / 7%);
+}
+
+#main .gallery-item img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+
+  transition: transform 300ms ease;
+}
+
+#main .gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+#main .faq-section {
+  background: var(--main-white);
+}
+
+#main .faq {
+  max-width: 850px;
+  margin-inline: auto;
+  border-top: 1px solid var(--main-border);
+}
+
+#main .faq-item {
+  border-bottom: 1px solid var(--main-border);
+}
+
+#main .faq-item h3 {
+  margin: 0;
+}
+
+/* FAQ question button */
+
+#main .faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  padding: 24px 0;
+
+  background: transparent;
+  color: var(--main-chocolate);
+  border: 0;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+/* Plus / minus indicator */
+
+#main .faq-question::after {
+  content: "+";
+  flex-shrink: 0;
+
+  color: var(--main-brown);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+#main .faq-question[aria-expanded="true"]::after {
+  content: "−";
+}
+
+/* FAQ answer */
+
+#main .faq-answer {
+  padding: 0 0 24px;
+}
+
+#main .faq-answer p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Respect the HTML hidden attribute */
+
+#main [hidden] {
+  display: none !important;
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+#main a:focus-visible,
+#main button:focus-visible,
+#main .slider-track:focus-visible {
+  outline: 3px solid var(--main-brown);
+  outline-offset: 5px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+  #main section {
+    padding-block: 60px;
+  }
+
+  #main .intro {
+    padding-block: 75px;
+  }
+
+  #main .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #main .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #main .slide figcaption {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  #main section {
+    padding-block: 48px;
+  }
+
+  #main .intro {
+    padding-block: 60px;
+  }
+
+  #main .intro p {
+    font-size: 1rem;
+  }
+
+  #main .featured {
+    padding-top: 10px;
+  }
+
+  #main .slide img {
+    height: 360px;
+  }
+
+  #main .slide figcaption {
+    padding: 22px;
+  }
+
+  #main .slide figcaption span {
+    font-size: 0.95rem;
+  }
+
+  #main .product-list {
+    gap: 12px;
+  }
+
+  #main .product-list li {
+    min-height: 120px;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  #main .gallery {
+    gap: 12px;
+  }
+
+  #main .slider-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #main *,
+  #main *::before,
+  #main *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--color-footer);
+  color: var(--color-footer-text);
+  padding: 48px 0;
+  margin-top: 80px;
+}
+
+.site-footer p {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.site-footer address {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-footer-text);
+}
+
+/* FOOTER LINKS */
+.site-footer a {
+  color: #fff9f0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-inner {
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-block: 16px;
+  }
+
+  .site-logo {
+    font-size: 1.35rem;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .header-inner > .btn {
+    margin-left: auto;
+  }
+
+  .site-footer {
+    padding: 36px 0;
+    margin-top: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
